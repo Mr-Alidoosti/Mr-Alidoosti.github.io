@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>رزومه | Mr-Alidoosti</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+    <div class="bg-shape shape-3"></div>
+
+    <main class="page-shell">
+      <header class="glass card hero">
+        <div class="layout-switch" role="group" aria-label="Layout direction switcher">
+          <button id="rtlBtn" class="switch-btn active" type="button">RTL</button>
+          <button id="ltrBtn" class="switch-btn" type="button">LTR</button>
+        </div>
+
+        <h1>علی دوستی</h1>
+        <p class="role">Software Engineer</p>
+        <p class="summary">
+          توسعه‌دهنده علاقه‌مند به ساخت محصول‌های سریع، مقیاس‌پذیر و کاربرمحور.
+          تمرکز بر مهندسی نرم‌افزار، تجربه کاربری مدرن و تحویل پایدار.
+        </p>
+      </header>
+
+      <section class="grid-layout">
+        <article class="glass card">
+          <h2>تجربه کاری</h2>
+          <ul class="timeline">
+            <li>
+              <strong>Senior Software Engineer</strong>
+              <span>2023 - اکنون</span>
+              <p>طراحی و توسعه سرویس‌های وب، بهبود کارایی و رهبری فنی تیم.</p>
+            </li>
+            <li>
+              <strong>Software Engineer</strong>
+              <span>2020 - 2023</span>
+              <p>پیاده‌سازی قابلیت‌های کلیدی محصول و توسعه زیرساخت CI/CD.</p>
+            </li>
+          </ul>
+        </article>
+
+        <article class="glass card">
+          <h2>مهارت‌ها</h2>
+          <div class="chips">
+            <span>JavaScript</span>
+            <span>TypeScript</span>
+            <span>React</span>
+            <span>Node.js</span>
+            <span>Python</span>
+            <span>GitHub Actions</span>
+          </div>
+        </article>
+
+        <article class="glass card">
+          <h2>تحصیلات</h2>
+          <p><strong>B.Sc. Computer Engineering</strong></p>
+          <p>دانشگاه نمونه | 2016 - 2020</p>
+        </article>
+
+        <article class="glass card">
+          <h2>ارتباط</h2>
+          <ul class="links">
+            <li><a href="mailto:you@example.com">you@example.com</a></li>
+            <li><a href="https://github.com/Mr-Alidoosti">github.com/Mr-Alidoosti</a></li>
+            <li><a href="#">LinkedIn Profile</a></li>
+          </ul>
+        </article>
+      </section>
+    </main>
+
+    <script>
+      const root = document.documentElement;
+      const rtlBtn = document.getElementById('rtlBtn');
+      const ltrBtn = document.getElementById('ltrBtn');
+
+      const setDirection = (dir) => {
+        root.setAttribute('dir', dir);
+        root.setAttribute('lang', dir === 'rtl' ? 'fa' : 'en');
+        rtlBtn.classList.toggle('active', dir === 'rtl');
+        ltrBtn.classList.toggle('active', dir === 'ltr');
+      };
+
+      rtlBtn.addEventListener('click', () => setDirection('rtl'));
+      ltrBtn.addEventListener('click', () => setDirection('ltr'));
+    </script>
+  </body>
+</html>
